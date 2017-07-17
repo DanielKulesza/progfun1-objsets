@@ -1,0 +1,1 @@
+Array(1, 3, 45, 12315, 3, 4,6 ,7).reduceLeft((x,y) => if (x > y) x else y)
