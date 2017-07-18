@@ -169,7 +169,7 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
       findMax(left.mostRetweeted,elem)
     }
     else{
-      findMax(left.mostRetweeted,right.mostRetweeted)
+      findMax(findMax(left.mostRetweeted,right.mostRetweeted),elem)
     }
   }
 
@@ -245,4 +245,7 @@ object GoogleVsApple {
 object Main extends App {
   // Print the trending tweets
   GoogleVsApple.trending foreach println
+
+
+
 }
